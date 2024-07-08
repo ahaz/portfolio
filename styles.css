@@ -2,6 +2,7 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    background-image: url('nemo.jpg');
     background-color: #f4f4f4;
     color: #333;
 }
