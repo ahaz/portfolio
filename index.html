@@ -13,24 +13,26 @@
 <p>Computing Science M.Sc | Software Developer | Full Stack Engineer</p>
 <nav>
 <ul>
-<li><a href="#about">About</a></li>
-<li><a href="#education">Education</a></li>
-<li><a href="#experience">Experience</a></li>
-<li><a href="#projects">Projects</a></li>
-<li><a href="#skills">Skills</a></li>
-<li><a href="#contact">Contact</a></li>
+<li><a href="#" onclick="showTab('about')">About</a></li>
+<li><a href="#" onclick="showTab('education')">Education</a></li>
+<li><a href="#" onclick="showTab('experience')">Experience</a></li>
+<li><a href="#" onclick="showTab('projects')">Projects</a></li>
+<li><a href="#" onclick="showTab('skills')">Skills</a></li>
+<li><a href="#" onclick="showTab('contact')">Contact</a></li>
 </ul>
 </nav>
 </div>
 </header>
-<section id="about">
+
+<section id="about" class="tab">
 <div class="container">
 <h2>About Me</h2>
 <p>+44 7405148772 | <a href="mailto:rajteketi@gmail.com">rajteketi@gmail.com</a> | <a href="https://www.linkedin.com/in/rajtkt006">LinkedIn</a></p>
 <p>Welcome to my portfolio! I am a software developer with experience in full stack development and a passion for creating efficient and scalable applications.</p>
 </div>
 </section>
-<section id="education">
+
+<section id="education" class="tab">
 <div class="container">
 <h2>Education</h2>
 <ul>
@@ -45,7 +47,8 @@
 </ul>
 </div>
 </section>
-<section id="experience">
+
+<section id="experience" class="tab">
 <div class="container">
 <h2>Work Experience</h2>
 <ul>
@@ -81,7 +84,8 @@
 </ul>
 </div>
 </section>
-<section id="projects">
+
+<section id="projects" class="tab">
 <div class="container">
 <h2>Projects</h2>
 <ul>
@@ -125,14 +129,13 @@
 <ul>
 <li>Aided in interpretation of plots in scientific publications in PDF by mining the underlied data points along with title and label detection</li>
 <li>Framed the method from various image processing techniques on the OCR(Tesseract)’s output and for plot extraction and legend detection</li>
-
- 
 </ul>
 </li>
 </ul>
 </div>
 </section>
-<section id="skills">
+
+<section id="skills" class="tab">
 <div class="container">
 <h2>Skills</h2>
 <ul>
@@ -142,16 +145,36 @@
 </ul>
 </div>
 </section>
-<section id="contact">
+
+<section id="contact" class="tab">
 <div class="container">
 <h2>Contact</h2>
 <p>Feel free to reach out to me through any of the contact information provided above or connect with me on LinkedIn.</p>
 </div>
 </section>
+
 <footer>
 <div class="container">
 <p>&copy; 2024 Raj Kumar Teketi. All rights reserved.</p>
 </div>
 </footer>
+
+<script>
+function showTab(tabName) {
+    // Hide all tabs
+    var tabs = document.querySelectorAll('.tab');
+    tabs.forEach(function(tab) {
+        tab.style.display = 'none';
+    });
+
+    // Display the selected tab
+    var selectedTab = document.getElementById(tabName);
+    if (selectedTab) {
+        selectedTab.style.display = 'block';
+    }
+}
+</script>
+
 </body>
 </html>
+
