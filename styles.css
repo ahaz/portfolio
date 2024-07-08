@@ -3,6 +3,8 @@ body {
     margin: 0;
     padding: 0;
     background-image: url('nemo.jpg');
+    background-size: cover; /* Ensure the background image covers the entire body */
+    background-repeat: no-repeat;
     background-color: #f4f4f4;
     color: #333;
 }
