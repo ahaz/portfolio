@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Raj Kumar Teketi - Portfolio</title>
 <link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
 <header>
@@ -21,6 +22,12 @@
                 <li><a href="#" onclick="showTab('contact')">Contact</a></li>
             </ul>
         </nav>
+        <div class="social-icons">
+            <!-- <a href="https://www.instagram.com/yourprofile" target="_blank"><i class="fab fa-instagram"></i></a> -->
+            <a href="https://github.com/yourprofile" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/rajtkt006" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="mailto:rajteketi@gmail.com"><i class="fas fa-envelope"></i></a>
+        </div>
     </div>
 </header>
 
@@ -158,6 +165,7 @@
 <footer>
     <div class="container">
         <p>&copy; 2024 Raj Kumar Teketi. All rights reserved.</p>
+        <p>Visitors: <span id="visitor-count"></span></p>
     </div>
 </footer>
 
@@ -181,5 +189,17 @@ document.addEventListener('DOMContentLoaded', function() {
     showTab('about');
 });
 </script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        fetch('counter.php')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('visitor-count').textContent = data;
+            })
+            .catch(error => console.error('Error fetching visitor count:', error));
+    });
+    </script>
+    
 </body>
 </html>
