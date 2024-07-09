@@ -1,88 +1,106 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    background-image: url('nemo.jpg');
-    background-size: cover; /* Ensure the background image covers the entire body */
-    background-repeat: no-repeat;
-    background-color: #f4f4f4;
+    background: #f4f4f4;
     color: #333;
 }
- 
-header {
-    background: #333;
-    color: #fff;
-    padding: 20px 0;
-    text-align: center;
-}
- 
-header h1 {
-    margin: 0;
-}
- 
-header p {
-    margin: 0;
-}
- 
-nav ul {
-    list-style: none;
-    padding: 0;
-}
- 
-nav ul li {
-    display: inline;
-    margin-right: 10px;
-}
- 
-nav ul li a {
-    color: #fff;
-    text-decoration: none;
-}
- 
-nav ul li a:hover {
-    text-decoration: underline;
-}
- 
+
 .container {
     width: 80%;
     margin: auto;
     overflow: hidden;
 }
- 
-section {
+
+header {
+    background: url('nemo.jpg') no-repeat center center/cover;
+    color: #060000;
+    padding-top: 30px;
+    min-height: 10px;
+    border-bottom: #040505 3px solid;
+}
+
+header a {
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 16px;
+}
+
+header ul {
+    padding: 0;
+    list-style: none;
+}
+
+header li {
+    display: inline;
+    padding: 0 20px 0 20px;
+}
+
+header #branding {
+    float: left;
+}
+
+header #branding h1 {
+    margin: 0;
+}
+
+header nav {
+    float: right;
+    margin-top: 10px;
+}
+
+header .highlight, header .current a {
+    color: #77d9d5;
+    font-weight: bold;
+}
+
+header a:hover {
+    color: #77d9d5;
+    font-weight: bold;
+}
+
+main {
     padding: 20px 0;
 }
- 
+
 section h2 {
-    color: #333;
-}
- 
-ul {
-    list-style: none;
-    padding: 0;
-}
- 
-li {
-    background: #eee;
-    margin-bottom: 10px;
-    padding: 10px;
-}
- 
-a {
-    color: #333;
-    text-decoration: none;
-}
- 
-a:hover {
-    text-decoration: underline;
-}
- 
-footer {
-    background: #333;
-    color: #fff;
     text-align: center;
-    padding: 10px 0;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
+    padding: 20px 0;
+}
+
+footer {
+    padding: 20px;
+    margin-top: 20px;
+    color: #fff;
+    background-color: #333;
+    text-align: center;
+}
+
+.tab {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    header {
+        padding-top: 20px;
+    }
+
+    header nav {
+        float: none;
+        text-align: center;
+    }
+
+    header nav ul {
+        padding: 0;
+    }
+
+    header nav ul li {
+        display: block;
+        padding: 10px;
+    }
+
+    .container {
+        width: 95%;
+    }
 }
